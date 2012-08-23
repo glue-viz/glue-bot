@@ -1,3 +1,4 @@
+import sys
 import os
 import subprocess
 import shutil
@@ -14,9 +15,12 @@ p = subprocess.Popen("git rev-parse HEAD".split(), stdout=subprocess.PIPE, stder
 p.wait()
 hash_local = p.stdout.read().strip()
 
-if hash_local != hash_remote:
+if hash_local != hash_remote or '--force' in sys.argv:
 
     p = subprocess.Popen("git pull".split())
+    p.wait()
+
+    p = subprocess.Popen("python setup.py install".split())
     p.wait()
 
     shutil.copy('scripts/glueqt', '../app/Glue.py')
