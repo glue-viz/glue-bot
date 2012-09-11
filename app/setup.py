@@ -13,7 +13,7 @@ DATA_FILES = [
 
 OPTIONS = {
     'argv_emulation': False,
-    'packages': ['zmq', 'glue', 'pyfits', 'pywcs', 'matplotlib', 'pygments', 'vo', 'atpy', 'scipy', 'numpy', 'IPython'],
+    'packages': ['zmq', 'glue', 'pyfits', 'pywcs', 'matplotlib', 'pygments', 'vo', 'atpy', 'aplpy', 'scipy', 'numpy', 'IPython'],
     'includes': ['PyQt4', 'PyQt4.QtCore', 'PyQt4.QtGui', 'sip'],
     'excludes': ['PyQt4.QtDesigner', 'PyQt4.QtNetwork', 'PyQt4.QtNetwork', 'PyQt4.QtOpenGL', 
         'PyQt4.QtScript', 'PyQt4.QtSql', 'PyQt4.QtTest', 'PyQt4.QtWebKit', 'PyQt4.QtXml', 
