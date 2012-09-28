@@ -12,7 +12,8 @@ DATA_FILES = [
 ]
 
 OPTIONS = {
-    'argv_emulation': False,
+    'argv_emulation': True,
+    'no_chdir': True,
     'packages': ['zmq', 'glue', 'astropy', 'matplotlib', 'pygments', 'vo', 'atpy', 'aplpy', 'scipy', 'numpy', 'IPython'],
     'includes': ['PyQt4', 'PyQt4.QtCore', 'PyQt4.QtGui', 'sip'],
     'excludes': ['PyQt4.QtDesigner', 'PyQt4.QtNetwork', 'PyQt4.QtNetwork', 'PyQt4.QtOpenGL', 
