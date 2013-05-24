@@ -14,11 +14,37 @@ DATA_FILES = [
 OPTIONS = {
     'argv_emulation': True,
     'no_chdir': True,
-    'packages': ['zmq', 'glue', 'astropy', 'matplotlib', 'pygments', 'vo', 'atpy', 'aplpy', 'scipy', 'numpy', 'IPython'],
+    'packages': ['zmq', 'glue', 'astropy', 'matplotlib', 'pygments','scipy', 'numpy', 'IPython', 'skimage', 'pyavm'],
     'includes': ['PyQt4', 'PyQt4.QtCore', 'PyQt4.QtGui', 'sip'],
     'excludes': ['PyQt4.QtDesigner', 'PyQt4.QtNetwork', 'PyQt4.QtNetwork', 'PyQt4.QtOpenGL', 
-        'PyQt4.QtScript', 'PyQt4.QtSql', 'PyQt4.QtTest', 'PyQt4.QtWebKit', 'PyQt4.QtXml', 
+        'PyQt4.QtScript', 'PyQt4.QtSql', 'PyQt4.QtWebKit', 'PyQt4.QtXml', 
         'PyQt4.phonon', 'Tkinter'],
+    'iconfile' : 'glue_icon.icns',
+    'resources': ['glue_file_icon.icns'],
+    'plist': dict(
+        CFBundleDocumentTypes=[
+            dict(
+                CFBundleTypeName='Glue Session',
+                CFBundleTypeExtensions=['glu'],
+                CFBundleTypeIconFile='glue_file_icon.icns',
+                LSHandlerRank='Owner'),
+            dict(
+                CFBundleTypeName='Flexible Image Transport System',
+                CFBundleTypeIconFile='glue_file_icon.icns',
+                CFBundleTypeExtensions=['fits', 'fit', 'fts'],
+                ),
+            dict(
+                CFBundleTypeName='VO Table',
+                CFBundleTypeIconFile='glue_file_icon.icns',
+                CFBundleTypeExtensions=['vot'],
+                ),
+            dict(
+                CFBundleTypeName='Comma Separated Value File',
+                CFBundleTypeIconFile='glue_file_icon.icns',
+                CFBundleTypeExtensions=['csv']
+                ),
+            ]
+        ),        
     }
 
 setup(
